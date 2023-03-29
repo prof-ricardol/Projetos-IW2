@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Formulário Senha</title>
+        <style>
+
+            input{
+                outline:none;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function oi(){       
+            var senha = document.getElementById('senha').value;
+            let confirma = document.getElementById('confirma').value;
+            var botao = document.getElementById('botao');
+            if(senha == confirma){
+                //window.alert('Senhas Iguais');
+                botao.style.backgroundColor = 'green';
+                botao.disabled = false;
+                document.getElementById('confirma').style.border = '2px solid green';
+                //document.getElementById('formulario').submit();
+            }else{
+               // window.alert('Senhas Diferentes');
+                document.getElementById('confirma').style.border = '2px solid red';
+                botao.style.backgroundColor = 'red';
+                botao.disabled = true;
+            }
+            }
+        </script>
+        <h2>Digite seu usuário e senha</h2>
+        <br>
+        <form action="recebeSenha.php" method="POST" id="formulario">
+            <label>Usuário: </label><input type="text" name="usuario" id="usuario">
+            <br>
+            <label>Senha: </label><input type="password" name="senha" id="senha"/>
+            <br>
+            <label>Confirma Senha: </label><input type="password" id="confirma" onkeyup="oi()"/>
+            <br>
+            <button type="button" id="botao" disabled>Fazer Cadastro</button>
+        </form>
+    </body>
+</html>

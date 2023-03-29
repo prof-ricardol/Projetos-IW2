@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Exercício 1 - Javascript</title>
+    </head>
+    <script>
+        function media(){
+            var nota1 = document.getElementById('n1').value;
+            var nota2 = document.getElementById('n2').value;
+            var nota3 = document.getElementById('n3').value;
+            
+            var media =(parseFloat(nota1)+parseFloat(nota2)+parseFloat(nota3))/3;
+            window.alert(media);
+            
+
+        }
+    </script>
+    <body>
+        
+        <input type="text" id="n1">
+        <br>
+        <input type="text" id="n2">
+        <br>
+        <input type="text" id="n3">
+        <br>
+     
+        <button type="button" onclick="media()">Calcular Media</button>
+        </form>
+    </body>
+</html>
